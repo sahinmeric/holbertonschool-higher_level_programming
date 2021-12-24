@@ -8,9 +8,9 @@ else:
     arg_str = "arguments"
 if __name__ == "__main__":
     if argc == 0:
-        print("{} {}.".format(argc, arg_str))
+        print("{:d} {:s}.".format(argc, arg_str))
     else:
-        print("{} {}.".format(argc, arg_str))
+        print("{:d} {:s}.".format(argc, arg_str))
         for i, j in enumerate(argv):
             if i != 0:
                 print("{:d}: {:s}".format(i, j))
