@@ -11,6 +11,6 @@ if __name__ == "__main__":
         print("{} {}.".format(argc, arg_str))
     else:
         print("{} {}.".format(argc, arg_str))
-        for i in argv:
+        for i, j in enumerate(argv):
             if i != 0:
-                print("{:d}: {:s}".format(i, argv[i]))
+                print("{:d}: {:s}".format(i, j))
