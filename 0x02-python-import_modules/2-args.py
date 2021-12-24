@@ -12,6 +12,5 @@ if __name__ == "__main__":
     else:
         print("{} {}.".format(argc, arg_str))
         for i in argv:
-            if argc != 0:
+            if i != 0:
                 print("{:d}: {:s}".format(i, argv[i]))
-
