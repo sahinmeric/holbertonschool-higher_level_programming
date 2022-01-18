@@ -17,5 +17,4 @@ class Square:
 
     @classmethod
     def area(self):
-    """returns area"""
         return int(self.__size) * int(self.__size)
