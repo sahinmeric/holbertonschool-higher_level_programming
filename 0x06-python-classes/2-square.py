@@ -9,7 +9,7 @@ class Square:
         if type(size) != int:
             print("size must be an integer")
             raise TypeError
-        if size < 0:
+        elif size < 0:
             print("size must be >= 0")
             raise ValueError
         else:
