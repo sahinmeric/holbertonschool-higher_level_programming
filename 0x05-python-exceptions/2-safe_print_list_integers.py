@@ -8,6 +8,5 @@ def safe_print_list_integers(my_list=[], x=0):
                 nmb += 1
     except IndexError:
         raise
-    finally:
-        print()
+    print()
     return nmb
