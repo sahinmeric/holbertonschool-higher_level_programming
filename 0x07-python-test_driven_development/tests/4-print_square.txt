@@ -1,0 +1,32 @@
+>>> print_square = __import__('4-print_square').print_square
+>>> import math
+>>> print_square({10})
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'set' and 'int'
+
+>>> print_square([])
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+>>> print_square([1])
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+>>> print_square(math.e)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(2**2)
+####
+####
+####
+####
+
+>>> print_square(1,2)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
