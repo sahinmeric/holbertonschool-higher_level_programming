@@ -1,2 +1,13 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+>>> text_indentation(2)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("")
