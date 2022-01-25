@@ -3,7 +3,8 @@
 This module contains a class
 """
 
+
 class LockedClass():
-	"""class that allows the first name
-	attribute to be created only"""
-	__slot__ = ["first_name"]
+    """class that allows the first name
+    attribute to be created only"""
+    __slot__ = ["first_name"]
