@@ -57,4 +57,4 @@ class Rectangle:
             for i in range(self.height):
                 for j in range(self.width):
                     txt += ('#' * self.width + '\n') * self.height
-                    return txt[:-1]ç
+                    return txt[:-1]
