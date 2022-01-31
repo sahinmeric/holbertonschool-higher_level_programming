@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains a class named MyList
+MyList class module contains a class named MyList
 that has a public instance function that prints
 the list items
 """
