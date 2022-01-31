@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ module has a function that checks
-wheter given objects are from same class or not
+whether given object is exactly
+an instance of specified class same class or not
 @obj: object
 @a_class: class
 """
