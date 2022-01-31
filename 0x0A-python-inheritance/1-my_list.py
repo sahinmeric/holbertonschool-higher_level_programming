@@ -2,9 +2,6 @@
 """initialization"""
 
 
-from xml.dom.minidom import Element
-
-
 class MyList(list):
     """class MyList that inherits from list"""
     def print_sorted(self):
