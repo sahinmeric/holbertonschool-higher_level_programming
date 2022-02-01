@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+this module contains a function that writes the given text to a file
 """
 
 
