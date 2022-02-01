@@ -1,10 +1,1 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
->>> len(__import__("7-base_geometry").__doc__) > 0
-True
-
->>> len(__import__("7-base_geometry").BaseGeometry.__doc__) > 0
-True
-
->>> len(__import__("7-base_geometry").BaseGeometry.integer_validator.__doc__) > 0
-True
