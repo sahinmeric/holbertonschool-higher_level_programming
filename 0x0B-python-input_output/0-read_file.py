@@ -10,5 +10,5 @@ def read_file(filename=""):
     @filename: file that will be read
     """
     with open(filename) as f:
-        print(f.read())
+        print(f.read(), end="")
         f.close()
