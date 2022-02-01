@@ -12,5 +12,5 @@ def load_from_json_file(filename):
     creates an Object from a “JSON file”:
     @filename: file
     """
-    with open(filename, 'w') as f:
-        f.write(json.loads(json.dumps(filename)))
+    with open(filename, 'r') as f:
+        return(json.loads(json.dumps(filename)))
