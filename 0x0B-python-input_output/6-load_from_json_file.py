@@ -13,4 +13,4 @@ def load_from_json_file(filename):
     @filename: file
     """
     with open(filename, 'w') as f:
-        f.write(json.loads(filename))
+        f.write(json.loads(json.dumps(filename)))
