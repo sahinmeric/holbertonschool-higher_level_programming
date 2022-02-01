@@ -12,4 +12,4 @@ def from_json_string(my_str):
     represented by a JSON string:
     @my_str: string object
     """
-    return json.dumps(my_str)
+    return json.loads(my_str)
