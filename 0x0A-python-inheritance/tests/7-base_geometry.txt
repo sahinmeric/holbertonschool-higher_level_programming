@@ -8,25 +8,3 @@ True
 
 >>> len(__import__("7-base_geometry").BaseGeometry.integer_validator.__doc__) > 0
 True
-
->>> geo = BaseGeometry()
->>> geo.integer_validator("my_i", 6)
-
->>> geo.integer_validator("length", 68)
-
->>> geo.integer_validator("", 15)
-
->>> geo.integer_validator("str", "Juan")
-Traceback (most recent call last):
-...
-TypeError: str must be an integer
-
->>> geo.integer_validator("year", 0)
-Traceback (most recent call last):
-...
-ValueError: year must be greater than 0
-
->>> geo.integer_validator("cash", -100)
-Traceback (most recent call last):
-...
-ValueError: cash must be greater than 0
