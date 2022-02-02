@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""initializate"""
+"""initialize"""
 
 
 class Student:
-    """create class student"""
+    """creates class student"""
 
     def __init__(self, first_name, last_name, age):
         """initializate atrributes
