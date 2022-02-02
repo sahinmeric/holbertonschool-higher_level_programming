@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """
-
+load add and save
 """
 
 
-from ast import arg
 from sys import argv
 
 
