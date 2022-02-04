@@ -4,12 +4,7 @@ this module contains a rectangle class that inherited grom base class
 """
 
 
-from ast import arg
-from operator import concat
 from sys import argv
-from unittest import case
-
-from soupsieve import match
 from models.base import Base
 
 
