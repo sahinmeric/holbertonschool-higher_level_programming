@@ -4,6 +4,7 @@ this module contains a rectangle class that inherited grom base class
 """
 
 
+from multiprocessing.sharedctypes import Value
 from models.base import Base
 
 
@@ -26,7 +27,13 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """ setter for width """
-        self.__width = value
+        if isinstance(value, int):
+            if value > 0:
+                self.__width = value
+            else:
+                raise ValueError("width must be > 0")
+        else:
+            raise TypeError("width must be an integer")
 
     @property
     def height(self):
@@ -36,7 +43,13 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """ setter for height"""
-        self.__height = value
+        if isinstance(value, int):
+            if value > 0:
+                self.__height = value
+            else:
+                raise ValueError("height must be > 0")
+        else:
+            raise TypeError("height must be an integer")
 
     @property
     def x(self):
@@ -46,7 +59,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ setter for x"""
-        self.__x = value
+        if value >= 0:
+            self.__x = value
+        else:
+            raise ValueError("x must be >= 0")
 
     @property
     def y(self):
@@ -56,4 +72,11 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """ setter for y"""
-        self.__y = value
+        if value >= 0:
+            self.__y = value
+        else:
+            raise ValueError("y must be >= 0")
+
+    def area(self):
+        """ calculates and returns the area of rectangle"""
+        return int(self.__width) * int(self.__height)
