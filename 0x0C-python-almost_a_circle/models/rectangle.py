@@ -4,7 +4,6 @@ this module contains a rectangle class that inherited grom base class
 """
 
 
-from multiprocessing.sharedctypes import Value
 from models.base import Base
 
 
@@ -81,9 +80,13 @@ class Rectangle(Base):
         """ calculates and returns the area of rectangle"""
         return int(self.__width) * int(self.__height)
 
-    def display(self):
+    def display(self,):
         """ prints rectangle with #"""
+        for m in range(self.y):
+            print(" ")
         for i in range(self.__height):
+            for n in range(self.x):
+                print(" ", end="")
             for j in range(self.__width):
                 print("#", end="")
             print("")
