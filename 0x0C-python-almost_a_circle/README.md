@@ -1,10 +1,10 @@
-0x0C. Python - Almost a circle
+0x0C. Python - Almost a circle<br>
 
-Learning Objectives\n
+Learning Objectives<br>
 
-What is Unit testing and how to implement it in a large project?\n
-How to serialize and deserialize a Class?\n
-How to write and read a JSON file?\n
-What is *args and how to use it?\n
-What is **kwargs and how to use it?\n
-How to handle named arguments in a function?\n
+What is Unit testing and how to implement it in a large project?<br>
+How to serialize and deserialize a Class?<br>
+How to write and read a JSON file?<br>
+What is *args and how to use it?<br>
+What is **kwargs and how to use it?<br>
+How to handle named arguments in a function?<br>
