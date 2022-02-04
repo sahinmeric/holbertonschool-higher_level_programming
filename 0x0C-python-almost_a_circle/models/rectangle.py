@@ -4,6 +4,12 @@ this module contains a rectangle class that inherited grom base class
 """
 
 
+from ast import arg
+from operator import concat
+from sys import argv
+from unittest import case
+
+from soupsieve import match
 from models.base import Base
 
 
@@ -94,3 +100,19 @@ class Rectangle(Base):
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
+
+    def update(self, *args):
+        if len(args) > 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                if i == 1:
+                    self.width = args[1]
+                if i == 2:
+                    self.height = args[2]
+                if i == 3:
+                    self.x = args[3]
+                if i == 4:
+                    self.y = args[4]
+        else:
+            pass
