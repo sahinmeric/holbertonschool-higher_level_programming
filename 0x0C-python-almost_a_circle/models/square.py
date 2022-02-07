@@ -44,9 +44,9 @@ class Square(Rectangle):
                 if i == 1:
                     self.size = args[1]
                 if i == 2:
-                    self.x = args[2]
+                    self._Rectangle__x = args[2]
                 if i == 3:
-                    self.y = args[3]
+                    self._Rectangle__y = args[3]
         else:
             for key, value in kwargs.items():
                 if key == 'id':
@@ -54,9 +54,9 @@ class Square(Rectangle):
                 if key == 'size':
                     self.size = value
                 if key == 'x':
-                    self.x = value
+                    self._Rectangle__x = value
                 if key == 'y':
-                    self.y = value
+                    self._Rectangle__y = value
 
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""

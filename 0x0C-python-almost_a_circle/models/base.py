@@ -2,6 +2,7 @@
 """
 this module contains base class
 """
+from os import path
 import json
 
 
@@ -22,7 +23,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries:"""
         if list_dictionaries is None or not list_dictionaries:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries, default=lambda o: o.__dict__)
 
     @classmethod
@@ -35,7 +36,7 @@ class Base:
         jsonFile = open(fileName, 'w')
         jsonFile.write(cls.to_json_string(dict_))
         jsonFile.close()
-    
+
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string"""
@@ -43,7 +44,7 @@ class Base:
         if pyt_obj is None or pyt_obj == []:
             return []
         return pyt_obj
-    
+
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set:"""
@@ -53,4 +54,13 @@ class Base:
             tmp = cls(1)
         cls.update(tmp, **dictionary)
         return tmp
-        
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances:"""
+        fileName = cls.__name__ + ".json"
+        if path.isfile(fileName):
+            with open(fileName, 'r') as f:
+                myList = cls.from_json_string(f.read())
+            return [cls.create(**a) for a in myList]
+        return []
