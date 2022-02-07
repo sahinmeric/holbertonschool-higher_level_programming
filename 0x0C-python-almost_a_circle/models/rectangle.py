@@ -60,10 +60,13 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ setter for x"""
-        if value >= 0:
-            self.__x = value
+        if isinstance(value, int):
+            if value >= 0:
+                self.__x = value
+            else:
+                raise ValueError("x must be >= 0")
         else:
-            raise ValueError("x must be >= 0")
+            raise TypeError("x must be an integer")
 
     @property
     def y(self):
@@ -73,10 +76,13 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """ setter for y"""
-        if value >= 0:
-            self.__y = value
+        if isinstance(value, int):
+            if value >= 0:
+                self.__y = value
+            else:
+                raise ValueError("y must be >= 0")
         else:
-            raise ValueError("y must be >= 0")
+            raise TypeError("y must be an integer")
 
     def area(self):
         """ calculates and returns the area of rectangle"""
