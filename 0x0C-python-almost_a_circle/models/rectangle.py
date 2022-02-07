@@ -13,6 +13,7 @@ class Rectangle(Base):
     Rectangle class
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ constructor for Rectangle class"""
         self.__width = width
         self.__height = height
         self.__x = x
@@ -93,10 +94,12 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """ Returns the description of the Rectangle instance """
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """ update method"""
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
@@ -124,4 +127,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
-        return {'width':self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y, 'id': self.id}
+        return {'width': self.__width, 'height': self.__height,
+                'x': self.__x, 'y': self.__y, 'id': self.id}

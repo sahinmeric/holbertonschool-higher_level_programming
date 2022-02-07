@@ -12,10 +12,12 @@ class Square(Rectangle):
     Square class
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """ Constructor for Square class"""
         self.__size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Returns the description of the Square instance"""
         return ("[Square] ({}) {}/{} - {}"
                 .format(self.id, self.x, self.y, self.width))
 
@@ -37,6 +39,7 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
 
     def update(self, *args, **kwargs):
+        """ update method"""
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
