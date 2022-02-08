@@ -15,7 +15,10 @@ class Base:
     def __init__(self, id=None):
         """ constructor for Base class"""
         if id is not None:
-            self.id = id
+            if type(id) is int:
+                self.id = id
+            else:
+                raise TypeError("id must be an integer")
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
