@@ -27,7 +27,7 @@ class Rectangle(Base):
         if width < 0:
             raise ValueError("width must be > 0")
         if width > 0:
-            self.__width = height
+            self.__width = width
 
         if x < 0:
             raise ValueError("x must be >= 0")
@@ -112,7 +112,7 @@ class Rectangle(Base):
     def display(self,):
         """ prints rectangle with #"""
         for m in range(self.__y):
-            print(" ")
+            print("")
         for i in range(self.__height):
             for n in range(self.__x):
                 print(" ", end="")
