@@ -111,10 +111,10 @@ class Rectangle(Base):
 
     def display(self,):
         """ prints rectangle with #"""
-        for m in range(self.y):
+        for m in range(self.__y):
             print(" ")
         for i in range(self.__height):
-            for n in range(self.x):
+            for n in range(self.__x):
                 print(" ", end="")
             for j in range(self.__width):
                 print("#", end="")
