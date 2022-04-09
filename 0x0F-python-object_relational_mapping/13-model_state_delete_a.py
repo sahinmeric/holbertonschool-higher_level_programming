@@ -10,7 +10,6 @@ from requests import Session
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import update
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -20,11 +19,13 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     sess = Session()
-    stmt = (
-        update(State).
-        where(State.id == 2).
-        values(name='New Mexico')
-    )
-    sess.execute(stmt)
+
+    res = sess.query(State).filter(State.name.like('%a%'))
+
+    if not res:
+        pass
+    else:
+        for row in res:
+            sess.delete(row)
     sess.commit()
     sess.close()
