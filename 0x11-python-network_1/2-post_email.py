@@ -14,4 +14,3 @@ if __name__ == "__main__":
     with request.urlopen(req) as response:
         mail = response.read()
     print(mail)
-    
