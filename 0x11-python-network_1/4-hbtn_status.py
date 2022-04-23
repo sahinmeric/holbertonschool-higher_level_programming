@@ -2,11 +2,11 @@
 """
 Python script that fetches https://intranet.hbtn.io/status
 """
-from urllib import request
+from urllib import requests
 
 if __name__ == "__main__":
-    req = request.Request("https://intranet.hbtn.io/status")
-    with request.urlopen(req) as response:
+    req = requests.Request("https://intranet.hbtn.io/status")
+    with requests.urlopen(req) as response:
         body = response.read()
     print("Body response:")
     print("\t- type: {}".format(type(body)))
