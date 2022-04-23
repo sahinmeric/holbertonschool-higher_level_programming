@@ -13,4 +13,4 @@ if __name__ == "__main__":
     req = request.Request(argv[1], data=data)
     with request.urlopen(req) as response:
         mail = response.read()
-    print(mail)
+    print(mail.decode('utf-8'))
