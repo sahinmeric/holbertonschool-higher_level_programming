@@ -12,4 +12,3 @@ if __name__ == "__main__":
     req = requests.get('https://api.github.com/user', auth=(user, pswd))
     user = req.json().get('id')
     print(user)
-    
